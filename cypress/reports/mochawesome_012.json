@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-09-08T22:08:49.328Z",
+    "end": "2024-09-08T22:09:28.933Z",
+    "duration": 39605,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "477cf66f-cf2f-43f5-b1e9-345eb4793206",
+      "title": "",
+      "fullFile": "cypress\\e2e\\features\\product\\ProductPurchase.cy.js",
+      "file": "cypress\\e2e\\features\\product\\ProductPurchase.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fdcf731f-3d3e-4f18-aa06-017300ea2139",
+          "title": "Product purchase",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login user ADMIN",
+              "fullTitle": "Product purchase Login user ADMIN",
+              "timedOut": null,
+              "duration": 7852,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginGeneral.loginAdmin)();",
+              "err": {},
+              "uuid": "ae2408dd-14fc-4b0d-9f9b-6231ccdd9214",
+              "parentUUID": "fdcf731f-3d3e-4f18-aa06-017300ea2139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product purchase with ADMIN",
+              "fullTitle": "Product purchase Product purchase with ADMIN",
+              "timedOut": null,
+              "duration": 21135,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _loginGeneral.loginAdmin)();\n_ProductPage.default.clickProductLbl();\n_ProductPage.default.clickProductsByImages();\n_ProductPage.default.fillQuantityProductImput();\nutilities.completePurchase();\nutilities.fillCardData();\n_ProductPage.default.clickPayBtn();\n_ProductPage.default.validateCheckoutProductLbl();",
+              "err": {},
+              "uuid": "529d707d-38ca-4ec5-ad35-c30462d205d4",
+              "parentUUID": "fdcf731f-3d3e-4f18-aa06-017300ea2139",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product purchase with logging  undefined",
+              "fullTitle": "Product purchase Product purchase with logging  undefined",
+              "timedOut": null,
+              "duration": 9179,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.fillSignupNameTxt();\n_LoginPage.default.fillSignupEmailTxt();\n_LoginPage.default.clickSignupBtn();\n// new user form\n_ProductPage.default.checkBox();\n_ProductPage.default.fillNameInput('John');\n_ProductPage.default.fillLastNameInput('Doe');\n_ProductPage.default.fillPasswordInput('password123');\n_ProductPage.default.fillDayInput('15');\n_ProductPage.default.fillMonthsInput('March');\n_ProductPage.default.fillYearsInput('1990');\n_ProductPage.default.fillAddressInput('123 Main St');\n_ProductPage.default.fillCityInput('New York');\n_ProductPage.default.fillStateInput('NY');\n_ProductPage.default.fillZipCodeInput('10001');\n_ProductPage.default.fillMobileNumberInput('1234567890');\n_ProductPage.default.fillCreateAccountBtn();\n_ProductPage.default.validateCreateAccountLbl();",
+              "err": {},
+              "uuid": "6c171ab2-0c5f-41dd-a544-31a26887baaf",
+              "parentUUID": "fdcf731f-3d3e-4f18-aa06-017300ea2139",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae2408dd-14fc-4b0d-9f9b-6231ccdd9214",
+            "529d707d-38ca-4ec5-ad35-c30462d205d4",
+            "6c171ab2-0c5f-41dd-a544-31a26887baaf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38166,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "saveAllAttempts": true,
+        "ignoreVideos": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -4,7 +4,8 @@ require('dotenv').config();
 module.exports = defineConfig({
   projectId: 'ogefwh',
   defaultCommandTimeout: 20000, // way time elements
-  video: false, //video
+  video: true, //video
+  screenshotOnRunFailure: true,
   viewportWidth: 1500, // way time test execute
   viewportHeight: 800, // screen test execute
   reporter: 'mochawesome',//reports

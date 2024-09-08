@@ -23,7 +23,7 @@ const dataDev = [
 ];
 
 
-if (url.includes('n5qa')) {
+if (url.includes('aut')) {
   dataCliente = dataQA;
 } else {
   dataCliente = dataDev;
