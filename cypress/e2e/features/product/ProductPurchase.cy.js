@@ -32,6 +32,14 @@ if (url.includes('aut')) {
 
 describe(`Product purchase`, () => {
 
+  
+  /*
+  // Simulate an iPhone X before each test
+ beforeEach(() => {
+   cy.viewport('iphone-x');
+   goToPage();
+ });*/
+
   beforeEach(() => {
     goToPage();
 
