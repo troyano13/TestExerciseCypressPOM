@@ -1,0 +1,30 @@
+{
+  "name": "Automation-Test",
+  "version": "0.0.1",
+  "description": "UI Automation Test",
+  "scripts": {
+    "runner": "cypress open",
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome",
+    "html-report": "cypress run --spec cypress/e2e/features/login/login.cy.js --browser chrome --headed"
+  },
+  "author": "Alexandra Troyano",
+  "license": "Proprietary",
+  "repository": "",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "cypress": "^13.13.1",
+    "cypress-dotenv": "^2.0.0",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "cypress-xpath": "^2.0.1",
+    "dotenv": "^16.4.5",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "cy": "^0.0.1",
+    "cypress-if": "^1.12.5",
+    "string-sanitizer": "^2.0.2"
+  }
+}
