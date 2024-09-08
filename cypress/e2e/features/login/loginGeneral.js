@@ -21,7 +21,7 @@ const loginAdmin = () => {
     Login.fillLoginEmailTxt(email);
     Login.fillLoginPasswordTxt(password);
     Login.clickLoginButtonBtn();
-    assertions.expectElementIsPresent(ProductPage.validateLoginSucesstLbl, 'Logged in as');
+    ProductPage.validateLoginSucesstLbl();
 
 };
 

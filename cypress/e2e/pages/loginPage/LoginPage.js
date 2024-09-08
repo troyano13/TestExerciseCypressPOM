@@ -42,7 +42,7 @@ class login extends Page {
     }
 
     clickSignupBtn() {
-        this.elements.clickByElementForce().click()
+        this.elements.signupBtn().click()
     }
 
     // login user 

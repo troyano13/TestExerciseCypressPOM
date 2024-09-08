@@ -6,9 +6,10 @@
 * */
 
 import ProductPage from '../../pages/productPage/ProductPage';
+import LoginPage from '../../pages/loginPage/LoginPage'
 import Utilities from '../../pages/helperPage/Utilities';
 import { Assertions } from '../../pages/helperPage/Assertions';
-import { loginAdmin, goToPage } from '../login/loginGeneral.cy';
+import { loginAdmin, goToPage, url } from '../login/loginGeneral';
 
 
 let dataCliente = [];
@@ -17,6 +18,16 @@ const dataQA = [
   { user: 'ADMIN', name: 'Jose' },
 
 ];
+const dataDev = [
+  { user: 'ADMIN', name: 'Jose' },
+];
+
+
+if (url.includes('n5qa')) {
+  dataCliente = dataQA;
+} else {
+  dataCliente = dataDev;
+}
 
 
 describe(`Product purchase`, () => {
@@ -43,17 +54,18 @@ describe(`Product purchase`, () => {
       ProductPage.fillQuantityProductImput();
       utilities.completePurchase();
       utilities.fillCardData();
-      ProductPage.clickPayBtn() ; 
+      ProductPage.clickPayBtn();
       ProductPage.validateCheckoutProductLbl();
 
     });
 
     it(`Product purchase with logging  ${data.email}`, () => {
 
-      ProductPage.fillSignupNameTxt();
-      ProductPage.fillSignupEmailTxt();
-      productPage.clickLoginButtonBtn();
+      LoginPage.fillSignupNameTxt();
+      LoginPage.fillSignupEmailTxt();
+      LoginPage.clickSignupBtn();
       // new user form
+      ProductPage.checkBox();
       ProductPage.fillNameInput('John');
       ProductPage.fillLastNameInput('Doe');
       ProductPage.fillPasswordInput('password123');
@@ -65,13 +77,10 @@ describe(`Product purchase`, () => {
       ProductPage.fillStateInput('NY');
       ProductPage.fillZipCodeInput('10001');
       ProductPage.fillMobileNumberInput('1234567890');
-      ProductPage.fillCheckBox();
       ProductPage.fillCreateAccountBtn();
-      assertions.expectElementIsPresent(ProductPage.validateCreateAccountLbl, 'Congratulations');
+      ProductPage.validateCreateAccountLbl();
 
     });
-
-   
 
 
 

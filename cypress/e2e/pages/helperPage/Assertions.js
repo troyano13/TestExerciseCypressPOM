@@ -27,9 +27,9 @@ export class Assertions {
    * @param element
    */
   expectElementIsPresentById(element) {
-    let expectElement = basePage.getElementBySelector(element);
-    expectElement.should("exist");
+    cy.contains(element).should("be.visible");
   }
+  
 
    /**
    * This method validates that an element is present in the DOM
