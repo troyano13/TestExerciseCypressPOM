@@ -1,0 +1,63 @@
+﻿TEST CASE DESIGN: LOGIN AND PRODUCT PURCHASE
+________________
+
+
+Test Case 1: Successful User Login
+Preconditions:
+* User has an active account with valid login credentials (username and password).
+* User is on the homepage https://automationexercise.com/
+Test Steps:
+1. Navigate to the login page.
+2. Enter the registered username and password in the respective input fields.
+3. Click on the "Login" button.
+Expected Results:
+* The user should be successfully logged in.
+* The system displays a "Logged in as ”Username" label, confirming the login.
+* The user is redirected to the homepage or to see” Logged in as”
+________________
+
+
+Test Case 2: Product Purchase with Logged-in User
+Preconditions:
+* User is logged into https://automationexercise.com/ (as per Test Case 1).
+* Products are available in stock.
+* User has valid payment details ready.
+Test Steps:
+1. Navigate to the product listing page.
+2. Click on a product image to view product details.
+3. Enter the desired quantity of the product.
+4. Click on the "Add to Cart" button.
+5. Proceed to the checkout page.
+6. Review the order summary.
+7. Enter valid payment details (name on card, card number, CVC, expiration date).
+8. Click the "Pay" or "Place Order" button.
+Expected Results:
+* The product is successfully added to the cart.
+* The order summary displays accurate product details, price, and total amount.
+* The payment is processed, and the user is redirected to the order confirmation page.
+* A confirmation message appears, stating, "Your order has been placed successfully."
+________________
+
+
+Test Case 3: Product Purchase with New User Registration
+Preconditions:
+* User is on the homepage or product listing page.
+* User does not have an existing account.
+Test Steps:
+1. Navigate to the product listing page and select a product.
+2. Click on the "Add to Cart" button.
+3. Proceed to the checkout page.
+4. On the checkout page, select the "Create an Account" option.
+5. Enter the required registration details: name, email, password, and shipping address.
+6. Complete the registration process.
+7. Proceed with the product purchase, as outlined in Test Case 2, from Step 6 onwards.
+Expected Results:
+* The user is successfully registered and logged in.
+* The product is added to the cart, and the checkout process proceeds.
+* The order is successfully placed, and a confirmation message is displayed.
+________________
+
+
+General Post-conditions:
+* After the purchase, the user's order should appear in the order history section of their account.
+* A confirmation email is sent to the user's registered email address with the purchase details.
