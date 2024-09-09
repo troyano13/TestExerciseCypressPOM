@@ -1,24 +1,25 @@
-﻿REPORT FOR PRODUCT PURCHASE AND LOGIN TESTS
-
-
-
-
-
+REPORT FOR PRODUCT PURCHASE AND LOGIN TESTS
 
 STATUS OF TEST EXECUTION:
+
 The test execution was successful, and the results support moving forward with the production deployment. Below are the details of the executed test cases:
 * Login Test: The login functionality was verified, and the system successfully authenticated a new user as expected.
 * Product Purchase Test: The product purchase flow was tested, and although an issue was identified with element selection, this has been addressed for future execution.
 
-
 ISSUES OR FAILURES ENCOUNTERED:
+
 * Product Purchase Test:
-   * A CypressError occurred during the product purchase flow when attempting to interact with a page element using cy.type(). The element was either not available or the selector used was incorrect. The failure occurred because the DOM element was not properly found, likely due to a race condition or incorrect selector.
+   * There were no critical issues in the login flow. All assertions were successfully met, and the product purchased in as expected
+
 * Login Test:
    * There were no critical issues in the login flow. All assertions were successfully met, and the user was logged in as expected.
+
 OUT OF SCOPE:
+
 * Accessibility and performance assessments were not specifically conducted in this test report.
+
 ADDITIONAL INFORMATION:
+
 * The execution was performed following the Screenplay pattern and POM (Page Object Model) architecture, ensuring better modularity and maintainability of the test code.
 * Tests were configured to run on mobile devices using Cypress, with resolutions simulating IOS mobile environments.
 * The server for Cypress was set up to run tests on Cypress Cloud, and results were sent with notifications to a Teams channel.
